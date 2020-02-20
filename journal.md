@@ -21,3 +21,11 @@ What did we learn?
 We learned how to add range and problability. We also learned to randomize the sides so each time the side changes
 What questions do I have?
 What is the limit for the range and what other uses could problability have in coding
+
+20/2/20
+What did we do?
+We created a chess board, wrote down the steps and instruction for creating it. Made the chess board into an optical illusion, and looked at other illusions online
+What did we learn?
+We learned how to create a chess board, by creating lines, adding squares and adding code to create a pattern of squares with spaces in between
+What questions do I have?
+Do these optical illusions have any uses in the real world. Can you also create a working chess board in Python?
