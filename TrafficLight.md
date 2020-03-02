@@ -32,5 +32,5 @@ void loop()
 
 The image of the circuit is shown in Fig. 1
 
-![Circuit] (Circuit.png)
+! [Circuit] (Circuit.png)
 Fig. 1 Circuit used for traffic light
