@@ -101,7 +101,7 @@ def draw():
     delay(100)
     
     
- 5//4/2020
+5//4/2020
  What are some ways in which Computer Science can help the fight against Covid-19?
 In your opinion, should people enable access to the resources of their personal computers as tools for research? Are there any risks?
 
@@ -176,8 +176,14 @@ def draw():
             y[i] = 0
 
     delay(100)
+    
+
+
    
- Task 5
+
+
+
+Task 5
 What should be some behaviours (at least 3) that we will need to include in our simulation to be a realistic approximation of the current situation in the world? Explain.
 
 1. We need a way to represent the differnet types of people who are ill such as people who are criticcally ill, people who have mild symptoms, people who are asymptomatic
