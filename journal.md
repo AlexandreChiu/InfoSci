@@ -37,8 +37,7 @@ What did we learn?
 How to make illusions in code and how to present them
 What questions do I have?
 What uses do these illusions have in the real world other than confuse people.
-```.py
-
+```python
 
 def setup():
     size(400, 00)
@@ -99,7 +98,7 @@ def mouseClicked():
         
 def draw():
     delay(100)
-    
+```
     
 5//4/2020
  What are some ways in which Computer Science can help the fight against Covid-19?
@@ -110,7 +109,7 @@ Yes, I think people should enable access to the resources of their personal comp
 
 Code for Task 3
 
-```.py
+```python
 
 # definition of variables
 posx = 300;
@@ -140,10 +139,11 @@ def draw():
         posx = 500;
         
 delay(100)
+```
 
 Task 4
 
-```.py
+```pyton
 
 #definition of variables
 x = []
@@ -177,6 +177,7 @@ def draw():
 
     delay(100)
     
+```
 
 
    
