@@ -194,3 +194,157 @@ What should be some behaviours (at least 3) that we will need to include in our 
 
 3. We need to include a way to represent countries from least developed to most developed, that way we can know which countries are the most able and have the most advanced resources to help cure the ill
 
+Week 29
+
+1)Code to printt 100 bears
+
+```python
+
+ x = ['bear']
+  c = 0
+def setup():
+    size (500,500)
+def draw():
+    global x
+for i in range(100):
+    c=c+1
+    print(c,'bear')
+    
+```
+
+2) Code to print 1900 - 2000
+
+```python
+
+x = 1900
+c = 1
+
+def setup():
+    size (500,500)
+def draw():
+    global x
+for i in range(100):
+    x=x+c
+    print(x)
+
+```
+
+3) Celsius to Fahrenheit
+
+```python
+
+i = 0
+u = 0
+def setup():
+    size (500,500)
+def draw():
+    global celsius, farenheit
+for i in range(100):
+    i = i+1
+    farenheit = i * 9/5 + 32
+    u = u+1
+    print (u, "Celisus is", farenheit,"F")
+
+```
+
+Covid-19 Simulation Code with Bar Graph
+
+```python
+
+# variable definiton
+x = [100, 200]
+y = [100, 250]
+h = [False, True] #False=>infected
+infected = 0 #count number of infected individuals
+iteration = 0
+peopleMoving = 10
+
+def bargraph():
+    global infected, x, iteration, peopleMoving
+    line(0, 500, 500, 500)
+    healthy = len(x) - infected
+    fill(255)
+    rect(150, 520, 10+healthy, 20)
+    fill(0)
+    text("Healthy",  50, 530)
+    text(str(healthy), 110, 530)
+    text("Iteration", 350, 530)
+    text(str(iteration), 400, 530)
+    fill(255,0,0)
+    rect(150, 550, 10+infected, 20)
+    text("Infected", 50, 560)
+    text(str(infected), 110, 560)
+    text("peopleMoving", 350, 550)
+    text(str(peopleMoving), 300, 550)
+    
+def setup():
+    size(500, 600)
+    #create random individuals
+    for n in range(20):
+        x.append(random(0,500))
+        y.append(random(0,500))
+        h.append(True) #All healthy
+    bargraph()
+        
+def distance(x1, x2, y1, y2):
+    a = (x1 - x2)
+    b = (y1 - y2)
+    c = sqrt(a**2 + b**2)
+    return c
+
+def draw():
+    global x, y, h, infected, iteration, peopleMoving
+    iteration += 1
+    background(255)
+    
+    #count number of infected
+    infected = 0
+    for i in range(len(h)):
+        if h[i] == False:
+            infected += 1
+    bargraph()
+    
+    #show the individuals
+    for ind in range(len(x)):
+        if h[ind] == True:
+            fill(255) #healthy
+        else:
+            fill(255, 0, 0)
+            
+        circle(x[ind], y[ind], 40)
+        #calculate the distance to each neighbour
+        for nei in range(len(x)):
+            if nei == ind:
+                continue
+            d = distance(x[ind], x[nei], y[ind], y[nei])
+            if d < 40 and (h[nei] == False or h[ind] == False):
+                #infection happends
+                h[ind] = False
+                h[nei] = False
+                
+    #move the individuals
+    for m in range(peopleMoving):
+        # move randomly
+        x[m] += random(-20, 20)
+        y[m] += random(-20, 20)
+        #Boundary conditions
+        if x[m] > 500: x[m] = 500 # right
+        if y[m] > 500: y[m] = 500 # bottom
+        if y[m] < 0: y[m] = 0 # top
+        if x[m] < 0: x[m] = 0 # left
+        
+    delay(100)
+                                          
+```    
+
+3) Simulation Results Table
+
+https://docs.google.com/document/d/1rzIK0wZ9VeaR7sh7AEymOc4Mb-RUKMeSEld3SIW92Yg/edit
+
+4) Conclusions from simulation
+
+I have come to the conclusion that the more people in a community move, the faster a virus will spread, movement is direectly associated with the speed and rate in which a virus spreads. Which is why self quarantine and social distancing is very effective during a pandemic.
+
+5) Change in table of simulations
+
+I would propose to change the population size as a sample size of 25 is too small to determine and come up with conclusions. I think to further understand and assess the Covid-19 situation that is happening it is important to have a large populatio size in the simulation. I would change the size to between 1000 to 50000 as that is the average population size for an urban area, city, or town 
