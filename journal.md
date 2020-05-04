@@ -162,20 +162,21 @@ def draw():
     
     #First individual
     for i in range(10):
-        circle(x[1],y[i],40)
+        circle(x[i],y[i],40)
         x[i] = x[i] + random(-10,10)
-        y[1] = y[1] + random(-10,10)
+        y[1] = y[i] + random(-10,10)
         
         if x[i] > 500:
             x[i] = 500
         if x[i] < 0:
             x[i] = 0
         if y[i] > 500:
-            y[i] =500
-        if y[1] < 0:
+            y[i] = 500
+        if y[i] < 0:
             y[i] = 0
 
     delay(100)
+   
     
 ```
 
